@@ -11,12 +11,34 @@
             app:touchAnchorId="@id/recyclerview"
             app:touchAnchorSide="top" />
 
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="60"
+                app:target="@id/toolbar_image">
+                <CustomAttribute
+                    app:attributeName="imageAlpha"
+                    app:customIntegerValue="255" />
+            </KeyAttribute>
+            <KeyAttribute
+                app:framePosition="90"
+                app:target="@id/toolbar_image">
+                <CustomAttribute
+                    app:attributeName="imageAlpha"
+                    app:customIntegerValue="0" />
+            </KeyAttribute>
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="pathRelative"
+                app:percentX="0.80"
+                app:target="@id/title" />
+        </KeyFrameSet>
+
     </Transition>
 
     <ConstraintSet android:id="@+id/expanded">
         <Constraint
             android:id="@id/toolbar_image"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/toolbar_image_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">

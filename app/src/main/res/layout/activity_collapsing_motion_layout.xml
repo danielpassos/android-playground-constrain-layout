@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     app:layoutDescription="@xml/collapsing_toolbar"
     tools:context=".MainActivity"
+    tools:showIn="0"
     tools:showPaths="true">
 
     <ImageView
         android:id="@+id/toolbar_image"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/toolbar_image_size"
         android:adjustViewBounds="true"
         android:background="@color/colorPrimary"
         android:contentDescription="@null"
