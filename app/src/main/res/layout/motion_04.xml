@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.motion.MotionLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/motionLayout"
     app:layoutDescription="@xml/scene_04"
@@ -9,12 +7,12 @@
     android:layout_height="match_parent"
     app:showPaths="true">
 
-    <android.support.constraint.utils.ImageFilterView
+    <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/image"
         android:background="@color/colorAccent"
         android:src="@drawable/summers"
         app:altSrc="@drawable/passos"
         android:layout_width="64dp"
-        android:layout_height="64dp"/>
+        android:layout_height="64dp" />
 
-</android.support.constraint.motion.MotionLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
