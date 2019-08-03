@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_collapsing_traditional.*
+import kotlinx.android.synthetic.main.activity_collapsing_motion_layout.*
+import kotlinx.android.synthetic.main.activity_collapsing_traditional.recyclerview
 
 class CollapsingToolbarActivity : AppCompatActivity() {
 
@@ -15,13 +16,15 @@ class CollapsingToolbarActivity : AppCompatActivity() {
         setContentView(R.layout.activity_collapsing_motion_layout)
 //        setContentView(R.layout.activity_collapsing_traditional)
 
+        back.setOnClickListener {
+            finish()
+        }
+
         recyclerview.apply {
             adapter = SimpleAdapter(items)
             layoutManager = LinearLayoutManager(this@CollapsingToolbarActivity,
                     RecyclerView.VERTICAL, false)
         }
-
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
+
 }
