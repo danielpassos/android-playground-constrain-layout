@@ -21,7 +21,7 @@ class CollapsingToolbarActivity : AppCompatActivity() {
         }
 
         recyclerview.apply {
-            adapter = SimpleAdapter(items)
+            adapter = ItemsAdapter(items)
             layoutManager = LinearLayoutManager(this@CollapsingToolbarActivity,
                     RecyclerView.VERTICAL, false)
         }

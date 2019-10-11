@@ -6,14 +6,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class SimpleAdapter(private val items: List<String>) : RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
+class ItemsAdapter(private val items: List<String>) :
+        RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return LayoutInflater.from(parent.context).run {
-            inflate(android.R.layout.simple_list_item_1, parent, false).let {
-                ViewHolder(it)
-            }
-        }
+        return ViewHolder(
+                LayoutInflater
+                        .from(parent.context)
+                        .inflate(android.R.layout.simple_list_item_1, parent, false)
+        )
     }
 
     override fun getItemCount(): Int = items.size
